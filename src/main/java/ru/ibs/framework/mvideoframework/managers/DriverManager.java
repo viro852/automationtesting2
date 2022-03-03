@@ -36,7 +36,7 @@ public class DriverManager {
     }
 
     private void initWebdriver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Arenter\\IdeaProjects\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\IdeaProjects\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);

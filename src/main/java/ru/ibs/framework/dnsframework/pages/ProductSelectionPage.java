@@ -1,5 +1,6 @@
 package ru.ibs.framework.dnsframework.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,11 +22,14 @@ public class ProductSelectionPage extends BasePage {
         PageFactory.initElements(driverManager.getDriver(), this);
     }
 
+
+    @Step("Проверяем открылась ли страница")
     public ProductSelectionPage checkOpenPage(String expectedH1) {
         assertEquals(expectedH1, h1.getText(), "Мы не перешли на страницу c выбором товара");
         return this;
     }
 
+    @Step("Выбираем товар по нужному id: '{productId}'")
     public ProductPage selectProductByProductId(String productID) {
         for (WebElement currentProduct : productSelectionPageList) {
             if (currentProduct.getAttribute("data-code").contains(productID)) {

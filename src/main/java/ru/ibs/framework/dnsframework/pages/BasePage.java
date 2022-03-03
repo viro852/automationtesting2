@@ -34,10 +34,6 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-//    public Boolean waitUntilInvisibilityOfElement(WebElement element){
-//        return );
-//    }
-
     public boolean elementIsPresent(WebElement element){
         if(element.isDisplayed()){
             return true;

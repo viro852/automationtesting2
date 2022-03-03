@@ -23,7 +23,7 @@ public class RgsTestsConfig {
     @BeforeEach
     void setUp() {
         System.out.println("устанавливается системаня переменная");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Arenter\\IdeaProjects\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\IdeaProjects\\chromedriver.exe");
         System.out.println("инициализируется драйвер");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
